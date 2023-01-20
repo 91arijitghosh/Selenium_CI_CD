@@ -27,7 +27,7 @@ public class OpenGoogle
       // DesiredCapabilities cap = DesiredCapabilities.chrome();
        // cap.setBrowserName("chrome");
        // cap.setPlatform(Platform.LINUX);
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resources\\chromedriver");
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--no-sandbox");
         //options.addArguments("--disable-dev-shm-usage");

@@ -32,10 +32,10 @@ public class OpenGoogle
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-       // options.setBinary("/usr/bin/google-chrome");
+        //options.setBinary("/usr/bin/google-chrome");
        // options.merge(cap);
        // driver = new RemoteWebDriver(new URL(gridURL),options);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

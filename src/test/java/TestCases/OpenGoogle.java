@@ -24,24 +24,24 @@ public class OpenGoogle
         String gridURL = "http://localhost:4444";
 
 
-      // DesiredCapabilities cap = DesiredCapabilities.chrome();
-       // cap.setBrowserName("chrome");
-       // cap.setPlatform(Platform.LINUX);
+        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        cap.setBrowserName("chrome");
+        cap.setPlatform(Platform.LINUX);
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/resources/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         //options.setBinary("/usr/bin/google-chrome");
-       // options.merge(cap);
-       // driver = new RemoteWebDriver(new URL(gridURL),options);
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
+        options.merge(cap);
+        driver = new RemoteWebDriver(new URL(gridURL),options);
+        //driver = new ChromeDriver(options);
+        //driver.manage().window().maximize();
+        //driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://www.google.com");
-        System.out.println("This is title"+driver.getTitle());
-        Thread.sleep(15000);
+        System.out.println("This is title : "+driver.getTitle());
+        Thread.sleep(10000);
         driver.quit();
 
     }

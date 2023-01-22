@@ -4,6 +4,10 @@
 Working parallel pipeline script
 ================================
 
+
+
+
+
 pipeline {
     agent {
         label 'Hub'
@@ -14,7 +18,7 @@ pipeline {
                 stage('HubSetup') {
                     
                     steps {
-                         checkout scmGit(branches: [[name: '*/CICD']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/91arijitghosh/Selenium_CI_CD.git']])
+                         checkout scmGit(branches: [[name: '*/CICD']], extensions: [], userRemoteConfigs: [[url:             'https://github.com/91arijitghosh/Selenium_CI_CD.git']])
 	                     
 	                     sh '''
 	                     cp /home/jenkins/selenium-server-4.7.2.jar /home/jenkins/workspace/Backup

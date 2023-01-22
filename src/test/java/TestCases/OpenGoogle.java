@@ -21,7 +21,7 @@ public class OpenGoogle
     public void open_Google() throws MalformedURLException, InterruptedException {
 
 
-        String gridURL = "http://http://184.72.176.212:4444";
+        String gridURL = "http://184.72.176.212:4444";
 
 
         DesiredCapabilities cap = DesiredCapabilities.chrome();

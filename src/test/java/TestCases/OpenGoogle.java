@@ -26,6 +26,7 @@ public class OpenGoogle
 
         DesiredCapabilities cap = DesiredCapabilities.chrome();
         cap.setBrowserName("chrome");
+        cap.setVersion("109");
         cap.setPlatform(Platform.LINUX);
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/resources/chromedriver");
         ChromeOptions options = new ChromeOptions();
@@ -33,7 +34,6 @@ public class OpenGoogle
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         options.setBinary("/usr/bin/google-chrome");
-        options.set_capability("browserVersion", "109");
         options.merge(cap);
         driver = new RemoteWebDriver(new URL(gridURL),options);
         //driver = new ChromeDriver(options);

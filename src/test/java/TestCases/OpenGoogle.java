@@ -32,7 +32,8 @@ public class OpenGoogle
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
-        //options.setBinary("/usr/bin/google-chrome");
+        options.setBinary("/usr/bin/google-chrome");
+        options.set_capability("browserVersion", "109")
         options.merge(cap);
         driver = new RemoteWebDriver(new URL(gridURL),options);
         //driver = new ChromeDriver(options);
